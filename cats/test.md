@@ -11,14 +11,14 @@ permalink: /test
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis non felis in porta. Nullam vel risus iaculis, pellentesque diam non, congue tortor. Nam et nisi elementum, hendrerit nibh ut, dignissim magna.
 
-이 헌법은 1988 년 2 월 25 일부터 시행한다. 다만, 이 헌법을 시행하기 위하여 필요한 법률의 제정·개정과 이 헌법에 의한 대통령 및 국회의원의 선거 기타 이 헌법시행에 관한 준비는 이 헌법시행 전에 할 수 있다.
+이 헌법은 **1988 년 2 월 25 일부터 시행한다. 다만,** 이 헌법을 시행하기 위하여 필요한 [법률의](#) 제정·개정과 이 헌법에 _의한_ 대통령 및 *국회의원의* 선거 기타 이 헌법시행에 관한 준비는 이 헌법시행 전에 할 수 있다.
 
 ![그림00](https://via.placeholder.com/350x150)
 
 Maecenas non dui eget ante tristique dapibus ultrices pretium metus. Fusce gravida, augue eu vestibulum venenatis, nisi orci aliquet odio, vitae suscipit mi felis pulvinar est. Cras lobortis mollis arcu, in pretium nunc.
 
 - 안녕하세요
-- 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, Hello!!!
+- 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, Hello!!! 안녕하세요, 안녕하세요, Hello!!!
 - 안녕한가요?
 - Hello World
 {:.information}
