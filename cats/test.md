@@ -24,7 +24,7 @@ Maecenas non dui eget ante tristique dapibus ultrices pretium metus. Fusce gravi
 {:.information}
 
 행정권은 대통령을 수반으로 하는 정부에 속한다. Cras lobortis mollis arcu, in pretium nunc. Cras lobortis mollis arcu, in pretium nunc. Cras lobortis mollis arcu, in pretium nunc. Cras lobortis mollis arcu, in pretium nunc.
-{:.pseudo}
+{:.information}
 
 ## Hello
 
