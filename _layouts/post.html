@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div id="page-title">
+    <h1>{{ page.title }}</h1>
+    <div>
+        Last updated: {{ page.updated }},
+        {% if page.cats.size > 0 %}
+            {% assign tag = page.cats | first %}
+                Tag: <a href="{{ site.url | append: '/cat/' | append: cat }}">{{ cat }}</a>
+            {% else %}
+            Tag: <a href="/">home</a>
+        {% endif %}
+    </div>
+</div>
+<div id="content">
+
+{{ content }} 
+
+</div>
+<div class="padding">&nbsp;</div>
+    <script src="https://utteranc.es/client.js"
+            repo="ziniblog/ziniblog.github.io"
+            issue-term="url"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+</script>
