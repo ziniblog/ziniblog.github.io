@@ -1,1 +1,10 @@
-theme: jekyll-theme-minimal
+title: "찌니블로그"
+description: "찌니의 프로그래밍 공부 블로그"
+url: "https://ziniblog.github.io"
+permalink: /post/:title
+cat_order: [home]
+
+markdown: kramdown
+kramdown:
+    syntax_highlighter_opts:
+        disable: true
