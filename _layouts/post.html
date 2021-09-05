@@ -7,9 +7,9 @@ layout: default
     <div>
         Last updated: {{ page.updated }},
         {% if page.cats.size > 0 %}
-            {% assign tag = page.cats | first %}
-                Tag: <a href="{{ site.url | append: '/cat/' | append: cat }}">{{ cat }}</a>
-            {% else %}
+            {% assign cat = page.cats | first %}
+                Category: <a href="{{ site.url | append: '/cat/' | append: cat }}">{{ cat }}</a>
+        {% else %}
             Category: <a href="/">home</a>
         {% endif %}
     </div>
