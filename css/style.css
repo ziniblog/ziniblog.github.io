@@ -46,8 +46,8 @@ img {vertical-align: bottom;}
 #content samp {font-family: 'Hack', 'NanumSquareRound', monospace; font-size: 16px; background-color: #eeeeee;}
 #content pre code {font-size: 14px; line-height: 24px; background-color: transparent; margin: 0;}
 
-#content p.information:after,
-#content p.file:after,
+#content p.information,
+#content p.file,
 #content ul,
 #content pre {position: relative; padding-top: 18px;}
 
