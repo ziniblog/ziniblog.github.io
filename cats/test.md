@@ -4,6 +4,7 @@ title: "테스트하기 위한 페이지입니다. Page for testing... 안녕하
 updated: 2021-09-05
 cats: [maincat,subcat]
 tags: [test]
+permalink: /test
 ---
 
 ## 안녕하세요, 테스트를 위한 페이지 입니다. CSS 조정을 위한 Test Page 입니다.
