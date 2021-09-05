@@ -13,7 +13,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis non felis 
 
 이 헌법은 1988 년 2 월 25 일부터 시행한다. 다만, 이 헌법을 시행하기 위하여 필요한 법률의 제정·개정과 이 헌법에 의한 대통령 및 국회의원의 선거 기타 이 헌법시행에 관한 준비는 이 헌법시행 전에 할 수 있다.
 
-![그림00](https://https://via.placeholder.com/350x150)
+![그림00](https://via.placeholder.com/350x150)
 
 Maecenas non dui eget ante tristique dapibus ultrices pretium metus. Fusce gravida, augue eu vestibulum venenatis, nisi orci aliquet odio, vitae suscipit mi felis pulvinar est. Cras lobortis mollis arcu, in pretium nunc.
 
@@ -42,7 +42,7 @@ Donec congue sollicitudin sapien, ut lobortis lectus fringilla tincidunt.
 
 Aenean ullamcorper urna vulputate urna porta, id rhoncus tortor viverra. Nulla ex mauris, dignissim nec accumsan sed, bibendum quis massa. Sed fermentum ut urna nec efficitur.
 
-![그림00](https://https://via.placeholder.com/1600x150)
+![그림00](https://via.placeholder.com/1600x150)
 
 캡션입니다.
 {:.caption}
