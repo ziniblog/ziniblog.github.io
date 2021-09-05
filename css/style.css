@@ -126,5 +126,5 @@ img {vertical-align: bottom;}
 
 .msg {display: inline-block; padding: 0 4px;}
 
-.hljs-ln-code {padding-left: 18px !important;}
-.hljs-ln-number {padding-right: 18px !important; border-right: 1px solid #999999;}
+td.hljs-ln-code {padding-left: 18px !important;}
+td.hljs-ln-number {padding-right: 18px !important; border-right: 1px solid #999999;}
