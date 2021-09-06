@@ -6,11 +6,11 @@ layout: default
     <h1>{{ page.title }}</h1>
     <div>
         Last updated: {{ page.updated }},
-        {% if page.cats.size > 0 %}
-            {% assign cat = page.cats | first %}
-                Category: <a href="{{ site.url | append: '/cat/' | append: cat }}">{{ cat }}</a>
+        {% if page.tags.size > 0 %}
+            {% assign tag = page.tags | first %}
+                Tag: <a href="{{ site.url | append: '/tag/' | append: tag }}">{{ tag }}</a>
         {% else %}
-            Category: <a href="/">home</a>
+            Tag: <a href="/">home</a>
         {% endif %}
     </div>
 </div>

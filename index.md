@@ -2,8 +2,7 @@
 layout: post
 title: "About..."
 updated: 2021-09-05
-cats: [home]
-tags: [zini,ziniblog,frontpage,home]
+tags: [home]
 ---
 
 ## About ME

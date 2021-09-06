@@ -21,8 +21,8 @@
                 <div id="header-title">{{ site.title }}</div>
                 <ul id="nav">
                     <li><a href="/">home</a></li>
-                    {% for cat in site.cat_order %}
-                        <li><a href="/cat/{{ cat }}">{{ cat }}</a></li>
+                    {% for tag in site.tag_order %}
+                        <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
