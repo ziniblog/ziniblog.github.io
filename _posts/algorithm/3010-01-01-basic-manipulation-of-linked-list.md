@@ -84,4 +84,53 @@ TBD
 
 ## 방향 뒤집기
 
-TBD
+이전 노드와 현재 노드를 가리키는 p, n 두 개의 변수를 상정한다. 처음에 p 는 None, n 은 연결리스트의 head 를 가리킨다.
+
+```plaintext
+p (2)    n (3)
+|        |
+v        v
+None     NODE     ┌--> NODE     ┌--> NODE
+         + val    |    + val    |    + val
+         + next --┘    + next --┘    + next --> None
+           (1)
+```
+{:.pseudo}
+
+방향을 반대로 하려면, (1) n.next 는 p 를, (2) p 는 n 을, (3) n 은 n.next 를 가리키면 된다. 이를 실행한 뒤의 결과는 아래와 같다.
+
+```plaintext
+         p (2)         n (3)
+         |             |
+         v             v
+None     NODE          NODE     ┌--> NODE
+^        + val         + val    |    + val
+└------- + next        + next --┘    + next --> None
+           (1)
+```
+{:.pseudo}
+
+다시 같은 일을 반복하면 된다. 마지막에는 아래와 같은 상황이 되며, n 이 None 을 가리키게 되는 시점에는 더 이상 진행 가능한 노드가 없드므로, 반복을 종료한다.
+
+```plaintext
+                                     p          n
+                                     |          |
+                                     v          |  
+None     NODE <---┐    NODE <---┐    NODE       |
+^        + val    |    + val    |    + val      v
+└------- + next   └--- + next   └--- + next     None
+```
+{:.pseudo}
+
+```python
+def create_linkedlist(head):
+    p, n = None, head
+
+    while n:
+        n.next, p, n = p, n, n.next
+
+    return p
+```
+{:.python}
+
+while 반복문 안 내용이 제일 중요한 부분이다. (1), (2), (3) 을 순서대로 적용했을 때, 마지막으로 n 을 n.next 가 가리키던 곳에 연결해야하지만, 이미 (1) 의 결과로 n.next 는 다른 곳을 가리키고 있다. 따라서 원래는 더미 변수에 미리 n.next 값을 옮겨뒀어야 하지만, Python 의 다중 할당은 이를 더미 변수 없이 편하게 할 수 있게 해준다.
