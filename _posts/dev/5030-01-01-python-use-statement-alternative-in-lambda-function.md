@@ -15,6 +15,7 @@ tags: [dev,code]
 
 - Statement 와 동일한 기능을 할 수 있는 Expression 찾기
 - 위에서 찾아낸 Expression 들을 튜플에 순서대로 담고, 제일 마지막 요소를 리턴
+{:.pseudo}
 
 구체적으로 나타내면 아래와 같다.
 
@@ -28,15 +29,15 @@ def f(arg):
     return res
 
 # Lambda 함수식
-lambda arg: (expression1, expression2, expression3, ... , res)[-1]
+f = lambda arg: (expression1, expression2, expression3, ... , res)[-1]
 ```
 {:.python}
 
 statement 1, 2, 3 과 동일한 기능을 하는 expression 1, 2, 3 을 튜플에 순서대로 담고, 마지막 튜플 요소를 리턴 대상으로 삼는 것이다. 튜플의 각 요소는 제일 왼쪽 요소부터 순서대로 평가가 되고, `[-1]` 인덱스 참조로 제일 마지막 요소를 반환하는 식이다.
 
-Statement 와 동일한 기능을 하는 Expression 을 찾는 것이 가장 중요한데, [이 사이트](https://tezblog.github.io/post/use-statements-in-lambda)를 보면, 다소 과거 Python 버전을 대상으로 하기는 했지만 나름 재밌는 내용을 확인할 수 있다.
+Statement 와 동일한 기능을 하는 Expression 을 찾는 것이 가장 중요한데, [이 사이트](http://p-nand-q.com/python/lambda.html)를 보면, 다소 과거 Python 버전을 대상으로 하기는 했지만 나름 재밌는 내용을 확인할 수 있다.
 
-그리고 중요한 건, 코드 작성자 입장에서 편리하기는 하지만, 가독성을 해치지 않는 범위에서만 적절히 사용해야 한다는 것을 잊지는 말아야 한다는 점이다.
+그리고 중요한 건, 코드 작성자 입장에서 편리하기는 하지만, 가독성을 해치지 않는 범위에서만 적절히 사용해야 한다는 것을 잊지는 말아야 한다.
 
 ## Expression 으로 전환 예시
 
