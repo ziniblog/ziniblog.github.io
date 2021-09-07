@@ -10,9 +10,9 @@ tags: [algorithm,graph]
 연결리스트는 하나의 데이터를 하나의 노드로 구성하고, 데이터 간의 연속성을 노드 간 연결로 구현한 자료구조이다.
 
 ```plaintext
-head --> NODE     ┌--> NODE     ┌--> NODE
-         + val    |    + val    |    + val
-         + next --┘    + next --┘    + next --> None
+head ──> NODE     ┌──> NODE     ┌──> NODE
+         + val    │    + val    │    + val
+         + next ──┘    + next ──┘    + next ──> None
 ```
 {:.pseudo}
          
@@ -78,7 +78,56 @@ def findnode(node, v):
 
 찾는 값이 있다면, 그 때의 노드를 가리키는 n 을 리턴하고, 끝까지 순회했는데도 없다면 None 을 리턴한다.
     
-## 노드 삽입/삭제
+## 노드 삽입
+
+n 이 가리키는 노드 뒤쪽으로, 새로운 데이터를 삽입한다고 하자. 새로운 데이터를 담은 노드 m 을 생성한 다음, 노드 연결을 조정하면 된다.
+
+```plaintext
+                             m ──┐    
+                                 v
+                                 NODE                       
+                                 + val                     
+                                 + next                      
+                   n ──┐           (2)                     
+                       v
+head ──> NODE     ┌──> NODE     ┌──> NODE
+         + val    │    + val    │    + val
+         + next ──┘    + next ──┘    + next ──> None
+                         (1)
+```
+{:.pseudo}
+
+n 이 가리키는 노드의 뒤로 m 이 가리키는 새로운 노드를 삽입한다고 하면, (1) n.next 는 m 이, (2) m.next 는 n.next 가 가리키던 곳을 가리키면 된다.
+
+연결 조정 후는 아래와 같다.
+
+```plaintext                               
+                             m ──┐    
+                                 v
+                              ┌> NODE                       
+                              │  + val                     
+                              │  + next ┐                     
+                   n ──┐      │    (2)  │                   
+                       v      │         v
+head ──> NODE     ┌──> NODE   │      NODE
+         + val    │    + val  │      + val
+         + next ──┘    + next ┘      + next ──> None
+                         (1)
+```
+{:.pseudo}
+
+코드로 옮기면 아래와 같다.
+
+```python
+def insertnode(node, v):
+    n, m = node, ListNode(v)
+    
+    n.next, m.next = m, n.next
+```
+
+(1), (2) 를 순서대로 적용했을 때, 마지막으로 m.next 를 n.next 가 가리키던 곳에 연결해야하지만, 이미 (1) 의 결과로 n.next 는 다른 곳을 가리키고 있다. 따라서 원래는 더미 변수에 미리 n.next 값을 옮겨뒀어야 하지만, Python 의 다중 할당은 이를 더미 변수 없이 편하게 할 수 있게 해준다.
+
+## 노드 삭제
 
 TBD
 
@@ -88,11 +137,11 @@ TBD
 
 ```plaintext
 p (2)    n (3)
-|        |
+│        │
 v        v
-None     NODE     ┌--> NODE     ┌--> NODE
-         + val    |    + val    |    + val
-         + next --┘    + next --┘    + next --> None
+None     NODE     ┌──> NODE     ┌──> NODE
+         + val    │    + val    │    + val
+         + next ──┘    + next ──┘    + next ──> None
            (1)
 ```
 {:.pseudo}
@@ -101,11 +150,11 @@ None     NODE     ┌--> NODE     ┌--> NODE
 
 ```plaintext
          p (2)         n (3)
-         |             |
+         │             │
          v             v
-None     NODE          NODE     ┌--> NODE
-^        + val         + val    |    + val
-└------- + next        + next --┘    + next --> None
+None     NODE          NODE     ┌──> NODE
+^        + val         + val    │    + val
+└─────── + next        + next ──┘    + next ──> None
            (1)
 ```
 {:.pseudo}
@@ -114,13 +163,15 @@ None     NODE          NODE     ┌--> NODE
 
 ```plaintext
                                      p          n
-                                     |          |
-                                     v          |  
-None     NODE <---┐    NODE <---┐    NODE       |
-^        + val    |    + val    |    + val      v
-└------- + next   └--- + next   └--- + next     None
+                                     │          │
+                                     v          │  
+None     NODE <───┐    NODE <───┐    NODE       │
+^        + val    │    + val    │    + val      v
+└─────── + next   └─── + next   └─── + next     None
 ```
 {:.pseudo}
+
+코드로 옮기면 아래와 같다.
 
 ```python
 def reverse_linkedlist(head):
@@ -133,4 +184,4 @@ def reverse_linkedlist(head):
 ```
 {:.python}
 
-while 반복문 안 내용이 제일 중요한 부분이다. (1), (2), (3) 을 순서대로 적용했을 때, 마지막으로 n 을 n.next 가 가리키던 곳에 연결해야하지만, 이미 (1) 의 결과로 n.next 는 다른 곳을 가리키고 있다. 따라서 원래는 더미 변수에 미리 n.next 값을 옮겨뒀어야 하지만, Python 의 다중 할당은 이를 더미 변수 없이 편하게 할 수 있게 해준다.
+while 반복문 안 내용이 제일 중요한 부분이다. 이 역시 Python 의 다중 할당으로, 더미 변수 없이 편하게 값을 교환할 수 있다.
