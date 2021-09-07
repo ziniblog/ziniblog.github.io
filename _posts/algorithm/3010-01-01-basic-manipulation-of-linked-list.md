@@ -10,9 +10,9 @@ tags: [algorithm,graph]
 연결리스트는 하나의 데이터를 하나의 노드로 구성하고, 데이터 간의 연속성을 노드 간 연결로 구현한 자료구조이다.
 
 ```plaintext
-head --> NODE    ┌--> NODE    ┌--> NODE
-         |val    |    |val    |    |val
-         |next --┘    |next --┘    |next --> None
+head --> NODE     ┌--> NODE     ┌--> NODE
+         + val    |    + val    |    + val
+         + next --┘    + next --┘    + next --> None
 ```
 {:.pseudo}
          
