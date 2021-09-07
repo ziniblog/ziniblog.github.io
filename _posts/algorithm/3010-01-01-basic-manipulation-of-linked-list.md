@@ -123,7 +123,7 @@ None     NODE <---┐    NODE <---┐    NODE       |
 {:.pseudo}
 
 ```python
-def create_linkedlist(head):
+def reverse_linkedlist(head):
     p, n = None, head
 
     while n:
