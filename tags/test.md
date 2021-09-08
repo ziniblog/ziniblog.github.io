@@ -37,15 +37,15 @@ def SayHello(msg):
 행정권은 대통령을 수반으로 하는 정부에 속한다. 법관은 탄핵 또는 금고 이상의 형의 선고에 의하지 아니하고는 파면되지 아니하며, 징계처분에 의하지 아니하고는 정직·감봉 기타 불리한 처분을 받지 아니한다.
 
 ```plaintext
-         n
-         │
-         v
-head ──> NODE     ┌──> NODE
-         + val    │    + val
-         + next ──┘    + next ──> None
-                                  ^
-                                  │
-                                  tail
+         n                                            n                               
+         │                                            |                   
+         v                                            v
+head ──> NODE     ┌──> NODE                  head --> NODE     ┌--> NODE
+         + val    │    + val                          + val    |    + val     
+         + next ──┘    + next ──> None                + next --┘    + next --> None
+                                  ^                                            ^
+                                  │                                            |
+                                  tail                                         tail
 ```
 {:.pseudo}
 
