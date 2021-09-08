@@ -46,6 +46,19 @@ head ──> NODE     ┌──> NODE                  head --> NODE     ┌--> 
                                   ^                                            ^
                                   │                                            |
                                   tail                                         tail
+
+         n                                            n                               
+         │                                            |                   
+         ↓                                            ↓
+head ──→ NODE     ┌──→ NODE                  head --→ NODE     ┌--→ NODE
+         + val    │    + val                          + val    |    + val     
+         + next ──┘    + next ──> None                + next --┘    + next --> None
+                                  ↑                                            ↑
+                                  │                                            |
+                                  tail                                         tail
+                                  
+                                  
+─ │ ┌ ┐ ┘ └ ├ ┬ ┤ ┴ │ ━ ┃ ┏ ┓ ┛ ┗ ┣ ┳ ┫ ┻ ╋ ┠ ┯ ┨ ┷ ┿ ┝ ┰ ┥ ┸ ╂ ┒ ┑┚┙┖ ┕ ┎ ┍ ┞ ┟ ┡ ┢ ┦ ┧ ┩ ┪ ┭ ┮ ┱ ┲ ┵ ┶ ┹ ┺ ┽ ┾ ╀ ╁ ╃ ╄ ╅ ╆ ╇ ╈ ╉ ╊
 ```
 {:.pseudo}
 
