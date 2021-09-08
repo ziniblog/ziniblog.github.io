@@ -129,7 +129,37 @@ def insertnode(node, v):
 
 ## 노드 삭제
 
-TBD
+노드 node 를 인수를 받아, 연결리스트 안에서 해당 노드를 삭제한다. 삭제 대상의 앞 노드와 뒷 노드를 연결해줘야하므로, 앞 노드 p 를 알고 있어야 한다.
+
+```plaintext
+         p             n
+         │             │
+         v             v
+head ──> NODE     ┌──> NODE     ┌──> NODE
+         + val    │    + val    │    + val
+         + next ──┘    + next ──┘    + next ──> None
+           (1)
+```
+{:.pseudo}
+
+n 노드를 건너뛰고 p 가 가리키는 노드와 n.next 가 가리키는 노드를 연결해주면 된다. (1) p.next 는 n.next 가 가리키던 곳을 가리키면 된다. 아래처럼 연결을 조정한다.
+
+```plaintext
+         p             n
+         │             │
+         v             v
+head ──> NODE          NODE     ┌──> NODE
+         + val         + val    │    + val
+         + next ──┐    + next   │    + next ──> None
+           (1)    └─────────────┘
+```
+{:.pseudo}
+
+필요없어진 n 노드는 Python 의 가비지 콜렉터에 의해 메모리에서 자동으로 사라지게 된다.
+
+코드는 아래와 같다.
+
+
 
 ## 방향 뒤집기
 
