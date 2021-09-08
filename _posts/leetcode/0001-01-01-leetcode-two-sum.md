@@ -1,5 +1,5 @@
 ---
-layout: leetcode
+layout: post
 title: "1. Two Sum"
 updated: 2021-09-08
 tags: [leetcode,seq]
