@@ -7,7 +7,7 @@ tags: [dev,code]
 
 ## Expression 만 허용하는 Lambda 함수식
 
-함수를 생성하는 def 구문 대신, 간편하게 함수를 생성해주는 lambda 구문을 사용할 때가 있다. 다른 언어의 익명함수와 비슷한데 Python 에서는 Expression 만 허용한다. 즉 lambda 함수식 안에는 변수에 값을 할당, break, return, while, global 등등 사용이 불가하다.
+함수를 생성하는 def 구문 대신, 간편하게 함수를 생성해주는 lambda 구문을 사용할 때가 있다. 다른 언어의 익명함수와 비슷한데 Python 에서는 Expression 만 허용한다. 즉 lambda 함수식 안에는 변수에 값을 대입, break, return, while, global 등등 사용이 불가하다. (참고로 무엇이 Statement 이고, 무엇이 Expression 인지 긴가민가하다면 [Python 공식문서](https://docs.python.org/ko/3/reference/index.html)에서, 6, 7, 8 항목을 살펴보기 바란다.)
 
 ## Def 함수식을 Lambda 함수식으로 전환
 
@@ -41,11 +41,11 @@ Statement 와 동일한 기능을 하는 Expression 을 찾는 것이 가장 중
 
 ## Expression 으로 전환 예시
 
-*1. 할당 (Assignment)*
+*1. 대입 (Assignment)*
 
-Python 의 할당문 (변수에 값을 삽입 또는 대입) 은 Statement 다. 이에 대한 불편함 때문인지 Expression 으로 평가하는 할당문이 3.8 버전 이상에서 소개되었다. := 연산자를 사용한 할당이 그것인데, [Python 공식문서](https://docs.python.org/ko/3/whatsnew/3.8.html#assignment-expressions)를 참고해보자.
+Python 의 대입문 (변수에 값을 삽입 또는 대입) 은 Statement 다. 이에 대한 불편함 때문인지 Expression 으로 평가하는 대입문이 3.8 버전 이상에서 소개되었다. := 연산자를 사용한 대입이 그것인데, [Python 공식문서](https://docs.python.org/ko/3/whatsnew/3.8.html#assignment-expressions)를 참고해보자.
 
-3.8 이전 버전이라면, := 연산자를 사용할 수 없으므로, 함수 호출을 이용한 할당을 해야 한다. (참고로, 함수의 호출은 Expression 으로 평가된다.) 예를들어, 어떤 리스트 a 가 있을 때, `a[1] = 10` 과 같은 Statement 는 `a.__setitem__(1, 10)` 과 같이 사용하면 된다. 리스트, 딕셔너리와 같이 요소에 값을 할당해주는 함수를 내장한 개체만이 가능하다. 따라서 단순 정수형의 할당은 대체 함수를 찾을 수 없어 Expression 전환이 어렵다.
+3.8 이전 버전이라면, := 연산자를 사용할 수 없으므로, 함수 호출을 이용한 대입을 해야 한다. (참고로, 함수의 호출은 Expression 으로 평가된다.) 예를들어, 어떤 리스트 a 가 있을 때, `a[1] = 10` 과 같은 Statement 는 `a.__setitem__(1, 10)` 과 같이 사용하면 된다. 리스트, 딕셔너리와 같이 요소에 값을 대입해주는 함수를 내장한 개체만이 가능하다. 따라서 단순 정수형과 같은 변수로의 대입은 대체 함수를 찾을 수 없어 Expression 전환이 어렵다.
 
 *2. For 반복문 break*
 
