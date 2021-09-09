@@ -8,15 +8,7 @@
     font-family:test;
     font-style:normal;
     font-weight:400;
-    src: url(/font/test.woff) format("woff");
-    /* unicode-range: U+AC00-D7A3;*/
-}
-
-@font-face {
-    font-family:test2;
-    font-style:normal;
-    font-weight:400;
-    src: url(/font/test2.woff) format("woff");
+    src: url(/font/test3.woff) format("woff");
     /* unicode-range: U+AC00-D7A3;*/
 }
 
