@@ -87,3 +87,5 @@ class Solution:
                 return l2
         else:
             return l1 or l2
+```
+{:.python}
