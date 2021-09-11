@@ -9,7 +9,7 @@ tags: [leetcode,design]
 
 [https://leetcode.com/problems/maximum-subarray/](https://leetcode.com/problems/maximum-subarray/)
 
-숫자들로 채워진 nums 리스트 안에서, 연속된 숫자들의 부분합들의 최대치 (최대부분합) 를 구하는 문제다. 문제에서는 시간복잡도 O(n) 으로 풀거나, 분할정복으로 풀어보라 하고있다.
+숫자들로 채워진 nums 리스트 안에서, 연속된 숫자들 합계의 최대치 (최대부분합) 를 구하는 문제다. 문제에서는 시간복잡도 O(n) 으로 풀거나, 분할정복으로 풀어보라 하고있다.
 
 가장 단순하게 생각하면 이중루프를 구현하면 된다. nums 를 x 로 순회하면서, x 이후의 숫자들을 y 로 다시 순회, 부분합의 모든 케이스를 구한 뒤 가장 큰 값을 골라내면 된다. 하지만 이중루프로 인해 시간복잡도는 O(n^2) 이 된다. 다른 알고리즘을 생각해야 한다.
 
@@ -41,7 +41,7 @@ class Solution:
 
 분할정복은 리스트를 둘로 계속 쪼갠 뒤, 조립하는 방법이다. 조립과정 구현이 어려운데 차근차근 이해해보자. 
 
-두 개의 리스트 L, R 을 조립해보자. 조립된 리스트를 L+R 이라 했을 때, L+R 의 최대부분합은 `max(L 의 최대부분합, R 의 최대부분합, L 과 R 을 이어붙인 부분의 최대부분합)` 이 된다. L 의 최대부분합을 lm, R 의 최대부분합을 rm 이라 하자. 이해하는데 어렵지 않다. 이해가 어려운 부분은 "L 과 R 을 이어붙인 부분의 최대부분합" 인데 아래와 같이 이해하자.
+두 개의 리스트 L, R 을 조립해보자. 조립된 리스트를 L+R 이라 했을 때, L+R 의 최대부분합은 `max(L 의 최대부분합, R 의 최대부분합, L 과 R 을 이어붙인 부분의 최대부분합)` 이 된다. L 의 최대부분합을 lm, R 의 최대부분합을 rm 이라 하자. 이해가 어려운 부분은 "L 과 R 을 이어붙인 부분의 최대부분합" 인데 아래와 같이 이해하자.
 
 ```plaintext
 L = [l1, l2, ... , ln]
@@ -109,7 +109,7 @@ class Solution:
             ll, lm, lr, lt = dac(A[:len(A)//2])
             rl, rm, rr, rt = dac(A[len(A)//2:])
             
-            return max(ll, lt+rl), max(lm, lr+rl, rm), max(lr+rt, rr), lt+rt
+            return max(ll, lt+rl), max(lm, rm, lr+rl), max(lr+rt, rr), lt+rt
         
         return dac(nums)[1]
 ```
