@@ -21,9 +21,8 @@ tags: [home]
 
 상당히 게을러서 언제까지 이 블로그를 계속 운영할지 모르겠다. 중간에 나몰라라하면서 내팽겨칠지도 모른다. 하지만 일단은 재밌게 시작해볼까 한다. 이제 시작합니다!
 
-```js
-var sayHello = function() {
-    console.log('Hello Blog! 🙋‍♂️🙋‍♀️');
-};
+```python
+def sayHello():
+    print('Hello Blog! 🙋‍♂️🙋‍♀️')
 ```
-{:.javascript}
+{:.python}
