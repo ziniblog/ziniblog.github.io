@@ -17,10 +17,10 @@ tags: [leetcode,seq]
 
 ```js
 var isValid = function(s) {
-    while (s) {
+    while(s) {
         var p = s;
         s = s.replace(/\(\)|\{\}|\[\]/g, '');
-        if (s.length == p.length) break;
+        if(s.length == p.length) break;
     }
     
     return s === '';
