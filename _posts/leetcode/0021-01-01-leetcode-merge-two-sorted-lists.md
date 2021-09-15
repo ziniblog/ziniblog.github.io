@@ -16,30 +16,30 @@ tags: [leetcode,graph,linked_list,recursion]
 ```plaintext
 l1 ------> NODE        +-----> NODE        +-----> NODE
            + val = 1   |       + val = 2   |       + val = 4
-		   + next -----+       + next -----+       + next ------> None
-		   
-		   
-		   
-		   
+           + next -----+       + next -----+       + next ------> None
+    
+ 	   
+ 	   
+ 	   
 l2 ------> NODE        +-----> NODE        +-----> NODE
            + val = 1   |       + val = 3   |       + val = 4
-		   + next -----+       + next -----+       + next ------> None
+     	   + next -----+       + next -----+       + next ------> None
 
-		            	      ||
-							 _||_
-						 	 \  /
-						  	  \/
+                                 ||
+                                _||_
+                                \  /
+                                 \/
 
 l3 ------> NODE           +--> NODE                NODE
            + val = 1      |    + val = 2           + val = 4
-		   + next --+     |    + next --+          + next ------> None
-		            |     |             |            ^
-		   +--------+     |    +--------+            |
-		   |              |    |                     +----------+
-		   v              |    v                                |
+    	   + next --+     |    + next --+          + next ------> None
+    	            |     |             |            ^
+    	   +--------+     |    +--------+            |
+    	   |              |    |                     +----------+
+    	   v              |    v                                |
            NODE           |    NODE        +-----> NODE         |
            + val = 1      |    + val = 3   |       + val = 4    |
-		   + next --------+    + next -----+       + next ------+
+    	   + next --------+    + next -----+       + next ------+
 ```
 {:.pseudo}
 
