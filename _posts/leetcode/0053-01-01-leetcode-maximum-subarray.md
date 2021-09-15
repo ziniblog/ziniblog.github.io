@@ -116,3 +116,24 @@ class Solution:
 {:.python}
 
 A 리스트를 받아서, 이를 좌/우로 쪼갠 리스트를 재귀호출, 그 결과를 위에서 언급한 변수들로 받고, 다시 조립하여 리턴한다. 재귀호출을 마치면 최종적으로는 최대부분합에 해당한는 부분을 리턴한다.
+
+아래는 같은 리스트 슬라이싱 하지 않고 같은 로직을 적용한 코드다.
+
+```python
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        def dac(A, i, j):
+            if i == j: return A[i], A[i], A[i], A[i]
+            
+            m = i + (j-i)//2
+            
+            ll, lm, lr, lt = dac(A, i, m)
+            rl, rm, rr, rt = dac(A, m+1, j)
+            
+            return max(ll, lt+rl), max(lm, lr+rl, rm), max(lr+rt, rr), lt+rt
+        
+        return dac(nums, 0, len(nums)-1)[1]
+```
+{:.python}
+
+i, j 두 변수가 슬라이싱 대신 최하단과 최상단 인덱스를 가리키는 포인터 역할을 하며, m 변수가 이들의 중간 인덱스 값을 계산하고 있다.
