@@ -104,6 +104,8 @@ class Solution:
             
         return b
 ```
+{:.python}
+
 for 반복문이 진행하면서 x, y 두 변수의 값을 추적해보면, 위 코드가 어떻게 동작하는지 감이 올 것이다. Bottom-Up 다이나믹 프로그래밍과 로직은 동일하다.
 
 functools 모듈의 reduce 함수를 사용해서 위 코드의 주요부분을 한줄로 나타낸 코드도 있었다.
