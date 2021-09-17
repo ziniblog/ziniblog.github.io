@@ -102,7 +102,7 @@ class Solution:
         for i in range(2, n+1):
             x, y = y, x+y
             
-        return b
+        return y
 ```
 {:.python}
 
