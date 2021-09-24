@@ -74,6 +74,17 @@ head ──→ NODE     ┌──→ NODE                  head --→ NODE     �
 
 안녕하세요반갑습니다
 hellothere!!!!=>
+
+         n                                            n                               
+         |                                            |                   
+         v                                            v
+head --> NODE     +--> NODE                  head --> NODE     ┌--> NODE
+         + val    |    + val                          + val    |    + val     
+         + next --+    + next --> None                + next --┘    + next --> None
+                         ^        ^                                            ^
+              +----------+        |                                           |
+              v                   tail                                         tail
+              NODE
 ```
 {:.pseudo}
 
