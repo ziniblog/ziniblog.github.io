@@ -12,7 +12,7 @@ var custom_pseudo_func = function(hljs) {
             {
                 className: 'comment',
                 begin: '#',
-                end: '\s\s|$|\n', 
+                end: '\\s\\s|\\n|$',
             },
             {
                 className: 'doctag',
