@@ -16,11 +16,11 @@ var custom_pseudo_func = function(hljs) {
             },
             {
                 className: 'strong',
-                begin: /[A-Z]+|(?<=[A-Z])[0-9]|[0-9](?=[A-Z])/,
+                begin: /[A-Z]\w+?[A-Z0-9]|\b[A-Z]\b/,
             },
             {
                 className: 'doctag',
-                begin: /[<>+|-▲▶▼◀]+/,
+                begin: /[<>+|▲▶▼◀-]+/,
             },
         ],
     };

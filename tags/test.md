@@ -78,7 +78,7 @@ hellothere!!!!=>
          n                                            n                               
          |                                            |                   
          ▼                                            ▼
-head --▶ NODE     +--▶ NODE                  head --▶ 00NODE     ┌--> NODE1   999   9999A
+head --▶ NODE     +--▶ NODE                  head --▶ 00NODE     ┌--> NODE1   999   9999A C  C3C  SPC4CED
          + val    |    + val                          + val    |    + val     
          + next --+    + next --> None                + next --┘    + next --> None
                          ▲        ▲                                            ▲
