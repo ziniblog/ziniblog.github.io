@@ -11,7 +11,7 @@ var custom_pseudo_func = function(hljs) {
         contains: [
             hljs.COMMENT('#', '  '),
             {
-                className: 'attr',
+                className: 'doctag',
                 begin: '[<>+|-]+',
             },
         ],
