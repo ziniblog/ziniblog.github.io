@@ -11,12 +11,16 @@ var custom_pseudo_func = function(hljs) {
         contains: [
             {
                 className: 'comment',
-                begin: '#',
-                end: '\\s\\s|\\n|$',
+                begin: /#/,
+                end: /\s\s|\n|$/,
+            },
+            {
+                className: 'strong',
+                begin: /[A-Z]+|(?<=[A-Z])[0-9]|[0-9](?<[A-Z])/,
             },
             {
                 className: 'doctag',
-                begin: '[<>+|-]+',
+                begin: /[<>+|-▲▶▼◀]+/,
             },
         ],
     };

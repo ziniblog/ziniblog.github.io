@@ -77,13 +77,13 @@ hellothere!!!!=>
 
          n                                            n                               
          |                                            |                   
-         v                                            v
-head --> NODE     +--> NODE                  head --> NODE     ┌--> NODE
+         ▼                                            ▼
+head --▶ NODE     +--▶ NODE                  head --▶ 00NODE     ┌--> NODE1   999   9999A
          + val    |    + val                          + val    |    + val     
          + next --+    + next --> None                + next --┘    + next --> None
-                         ^        ^                                            ^
-              +----------+        |                                           |
-              v                   tail                                         tail
+                         ▲        ▲                                            ▲
+              +----------+        |                                            |
+              ▼                   tail                                         tail
               NODE
 ```
 {:.pseudo}
