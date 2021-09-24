@@ -62,7 +62,7 @@ head ──→ NODE     ┌──→ NODE                  head --→ NODE     �
 
 
 ┌──┐ ┏━━┓
-│  │ ┃  ┃sdvsdv # ababargerg srg ef wef ! efwef  ???!!!
+│  │ ┃  ┃sdvsdv # ababargerg srg ef wef ! 444 NONE efwef  ???!!!
 └──┘ ┗━━┛
 
   
