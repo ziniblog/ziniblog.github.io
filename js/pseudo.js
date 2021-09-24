@@ -7,7 +7,7 @@ Category: common
 
 var custom_pseudo_func = function(hljs) {
     return {
-        aliases: ['zini'],
+        aliases: ['ps'],
         contains: [
             {
                 className: 'comment',
