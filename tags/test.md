@@ -74,11 +74,11 @@ head ──→ NODE     ┌──→ NODE                  head --→ NODE     �
 
 #안녕하세요반갑습니다
 hellothere!!!!=>
-ṿṿ^vv
+ṿṿ^vvV̇V̇v̇v̇v̇
 ᵥᵛ𝚟𝐯
          n                                            n                               
          |                                            |                   
-         ▼                                            ▼
+         v̇                                            v̇
 head --▶ NODE     +--▶ NODE                  head --▶ 00NODE     ┌--> NODE1   999   9999A C  C3C  SPC4CED
          + val    |    + val                          + val    |    + val     
          + next --+    + next --> None                + next --┘    + next --> None
