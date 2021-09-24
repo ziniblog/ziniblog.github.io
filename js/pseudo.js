@@ -19,6 +19,10 @@ var custom_pseudo_func = function(hljs) {
                 begin: /\b[A-Z][A-Z0-9]*\b/,
             },
             {
+                className: 'number',
+                begin: /\b[0-9]+\b/,
+            },
+            {
                 className: 'doctag',
                 begin: /[+|▲▶▼◀-]+/,
             },
