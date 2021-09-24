@@ -2,7 +2,7 @@ title: "찌니블로그"
 description: "찌니의 프로그래밍 공부 블로그"
 url: "https://ziniblog.github.io"
 permalink: /post/:title
-tag_order: [leetcode,dev]
+tag_order: [algorithm,dev]
 
 markdown: kramdown
 kramdown:
