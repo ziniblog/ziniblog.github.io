@@ -9,10 +9,10 @@ var custom_pseudo_func = function(hljs) {
     return {
         aliases: ['zini'],
         contains: [
-            hljs.COMMENT('#', '  '),
+            hljs.COMMENT('#', '/\s\s|$/'),
             {
                 className: 'doctag',
-                begin: '[<>+|-]+',
+                begin: '/[<>+|-]+/',
             },
         ],
     };
