@@ -84,11 +84,16 @@ hljs.registerLanguage("python", function(hljs) {
       {begin: hljs.C_NUMBER_RE + '[lLjJ]?'}
     ]
   };
+  // zini added LITERAL object
+  var LITERAL = {
+    className: 'literal',
+    begin: /None|False|True/
+  };
   var PARAMS = {
     className: 'params',
     begin: /\(/, end: /\)/,
     // contains: ['self', PROMPT, NUMBER, STRING, hljs.HASH_COMMENT_MODE]
-    contains: ['self', PROMPT, NUMBER, STRING, hljs.HASH_COMMENT_MODE, KEYWORDS] // zini modified
+    contains: ['self', PROMPT, NUMBER, STRING, hljs.HASH_COMMENT_MODE, LITERAL] // zini modified
   };
   SUBST.contains = [STRING, NUMBER, PROMPT];
   return {
