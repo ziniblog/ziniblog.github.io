@@ -89,6 +89,15 @@ head --▶ NODE     +--▶ NODE                  head --▶ 00NODE     ┌--> NO
 ```
 {:.pseudo}
 
+```python
+class ListNode:
+    def __init__(self, val=0, next=None, t=True):
+        self.val = val
+        self.next = next
+        self.t = t
+```
+{:.python}
+
 Donec congue sollicitudin sapien, ut lobortis lectus fringilla tincidunt.
 
 ## 안녕하세요, 테스트를 위한 페이지 입니다. CSS 조정을 위한 Test Page 입니다.
