@@ -24,7 +24,7 @@ var custom_pseudo_func = function(hljs) {
             },
             {
                 className: 'doctag',
-                begin: /[-+*/><=!^ṿ\\]+/,
+                begin: /[-+*/><=!^ṿ|\\]+/,
             },
         ],
     };
