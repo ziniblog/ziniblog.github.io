@@ -5,7 +5,7 @@ Website: None
 Category: common
 */
 
-var custom_pseudo_func = function(hljs) {
+hljs.registerLanguage("pseudo", function(hljs) {
     return {
         aliases: ['ps'],
         contains: [
@@ -28,6 +28,4 @@ var custom_pseudo_func = function(hljs) {
             },
         ],
     };
-};
-
-hljs.registerLanguage("pseudo", custom_pseudo_func)
+});
