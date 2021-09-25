@@ -23,7 +23,7 @@ var custom_pseudo_func = function(hljs) {
                 begin: /\b[0-9]+\b/,
             },
             {
-                className: 'doctag',
+                className: 'leadline',
                 begin: /[-+*/><=!^ṿ|\\]+/,
             },
         ],
