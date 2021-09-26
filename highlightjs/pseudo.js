@@ -9,7 +9,11 @@ hljs.registerLanguage("pseudo", function(hljs) {
     return {
         aliases: ['ps'],
         contains: [
-            
+            {
+                className: 'comment',
+                begin: /#/,
+                end: /\s\s|\n|$/,
+            },
             {
                 className: 'strong',
                 begin: /\b[A-Z][A-Z0-9]*\b/,
@@ -21,11 +25,6 @@ hljs.registerLanguage("pseudo", function(hljs) {
             {
                 className: 'leadline',
                 begin: /[-+*\/><=!^ṿ|?\\]+/,
-            },
-            {
-                className: 'comment',
-                begin: /#/,
-                end: /\s\s|\n|$/,
             },
         ],
     };
