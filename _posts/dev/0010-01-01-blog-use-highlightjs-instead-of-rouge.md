@@ -89,7 +89,7 @@ hljs.registerLanguage("pseudo", function(hljs) {
 ```
 {:.javascript}
 
-아주 간단한 것만 적용했다. 순서대로 살펴보면 우선 "pseudo" 라고 명명했다. 나중에 포스팅할 때 마크다운에서는 `&#x60;&#x60;&#x60;pseudo` 로, html 파일에서는 `<pre><code class="language-pseudo">` 로 시작하면 적용된다.
+아주 간단한 것만 적용했다. 순서대로 살펴보면 우선 "pseudo" 라고 명명했다. 나중에 포스팅할 때 마크다운에서는 `\`\`\`pseudo` 로, html 파일에서는 `<pre><code class="language-pseudo">` 로 시작하면 적용된다.
 
 크게 strong, number, leadline, comment 를 판단하도록 했다. 정규식을 사용했는데 그 의미는 쉽게 이해할 거라 생각한다.
 
