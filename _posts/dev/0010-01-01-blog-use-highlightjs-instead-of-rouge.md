@@ -89,11 +89,11 @@ hljs.registerLanguage("pseudo", function(hljs) {
 ```
 {:.javascript}
 
-아주 간단한 것만 적용했다. 순서대로 살펴보면 우선 "pseudo" 라고 명명했다. 나중에 포스팅할 때 마크다운에서는 `\`\`\`pseudo` 로, html 파일에서는 `<pre><code class="language-pseudo">` 로 시작하면 적용된다.
+아주 간단한 것만 적용했다. 순서대로 살펴보면 우선 "pseudo" 라고 명명했다. 나중에 포스팅할 때 마크다운에서는 {% raw %}<code>```pseudo</code>{% endraw %} 로, html 파일에서는 `<pre><code class="language-pseudo">` 로 시작하면 적용된다.
 
 크게 strong, number, leadline, comment 를 판단하도록 했다. 정규식을 사용했는데 그 의미는 쉽게 이해할 거라 생각한다.
 
-leadline 은 원래 Highlighterjs 에서 디폴트로 적용되는 클래스명이 아니지만 이렇게 별도로 지정할 수 있다. css 파일에 `.hljs-leadline{ ... }` 와 같은 식으로 추가하면 된다.
+leadline 은 원래 Highlight.js 에서 디폴트로 적용되는 클래스명이 아니지만 이렇게 별도로 지정할 수 있다. css 파일에 `.hljs-leadline{ ... }` 와 같은 식으로 추가하면 된다.
 
 아래는 커스터마이징 한 pseudo 코드가 어떻게 하이라이팅이 되는지 실제로 적용해 본 예시다.
 
