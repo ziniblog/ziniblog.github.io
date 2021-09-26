@@ -24,7 +24,7 @@ hljs.registerLanguage("pseudo", function(hljs) {
             },
             {
                 className: 'leadline',
-                begin: /[-+*/><=!^ṿ|\\]+/,
+                begin: /[-+*\/><=!^ṿ|?\\]+/,
             },
         ],
     };

@@ -90,11 +90,11 @@ head --▶ NODE     +--▶ NODE                  head --▶ 00NODE     ┌--> NO
 {:.pseudo}
 
 ```python
-class ListNode:
-    def __init__(self, val=0, next=None, t=True):
+class Node:
+    def __init__(self, val=0, next=None, end=True):
         self.val = val
         self.next = next
-        self.t = t
+        self.end = True if next is None else False
 ```
 {:.python}
 
