@@ -13,7 +13,7 @@ tags: [dev,blog]
 
 ## Rouge 사용 중지 설정
 
-먼저 Rouge 사용을 하지 않도록 설정을 한다. 구글링해보면 방법을 쉽게 찾을 수 있는데, 아래 코드를 "&lowbar;config.yml" 파일에 삽입했다.
+먼저 Rouge 사용을 하지 않도록 설정을 한다. 구글링해보면 방법을 쉽게 찾을 수 있는데, 아래 코드를 _config.yml 파일에 삽입했다.
 
 ```yaml
 markdown: kramdown
@@ -25,7 +25,7 @@ kramdown:
 
 ## Highlight.js 설치
 
-다음은 Highlight.js 를 설치한다. "&lowbar;layouts" 폴더에 있는 "default.html" 파일에 아래 코드를 삽입했다.
+다음은 Highlight.js 를 설치한다. _layouts 폴더에 있는 default.html 파일에 아래 코드를 삽입했다.
 
 ```html
 <!-- head 태그 제일 아래쪽에 삽입 -->
@@ -94,6 +94,19 @@ hljs.registerLanguage("pseudo", function(hljs) {
 크게 strong, number, leadline, comment 를 판단하도록 했다. 정규식을 사용했는데 그 의미는 쉽게 이해할 거라 생각한다.
 
 leadline 은 원래 Highlight.js 에서 디폴트로 적용되는 클래스명이 아니지만 이렇게 별도로 지정할 수 있다. css 파일에 `.hljs-leadline{ ... }` 와 같은 식으로 추가하면 된다.
+
+이를 별도의 파일 pesudo.js 로 저장한 뒤, default.html 파일에 아래와 같이 추가했다.
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/languages/excel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/languages/vbnet.min.js"></script>
+<script src="/js/pseudo.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+```
+{:.html}
 
 아래는 커스터마이징 한 pseudo 코드가 어떻게 하이라이팅이 되는지 실제로 적용해 본 예시다.
 
